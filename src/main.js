@@ -29,9 +29,9 @@ await session.setSource(source);
 
 session.play('capture');
 
-await setTimeout(function(){session.applyLens(lens)},5000);
+await setTimeout(function(){session.applyLens(lens)},500);
 
-//playNow();
+playNow();
 
 })();
 
