@@ -27,8 +27,6 @@ await session.setSource(source);
 
 session.play('capture');
 
-await session.applyLens(lenses[6]);
-
 await setTimeout(function(){session.applyLens(lenses[6])},500);
 
 playNow();
