@@ -8,7 +8,7 @@
     <script src="./packed.js"></script>
   </head>
 
-  <body>
+  <body onload="change()">
     <section id="links">
     <a class="a" href="https://www.betway.com.gh/lobby/casino/game/flyx-win-boost/?btag=P105035-PR37410-CM104375-TS2009649&utm_source=DigitalMedia&utm_medium=AR_QRCode_GH_1x1_FlyXWinBoost&utm_campaign=AR_QRCode&utm_content=1x1_BW_GH_FlyXWinboost">
       <button id="playbtn" class="full-width-button" style="visibility: hidden;">PLAY NOW</button>
@@ -30,5 +30,16 @@
       <img id="image" src="./assets/Powered_bysnap.png" alt="Powered by Snap">
     </div>
     <video id="video" style="display:none;" autoplay muted playsinline></video>
+    <script>
+      function change() { 
+        return new Promise(function (resolve, reject) { 
+      
+            // Setting 5000 ms time 
+            setTimeout(resolve, 7000); 
+        }).then(function () { 
+          document.getElementById("playbtn").style.visibility = "visible"; 
+        }); 
+      }
+      </script>
   </body>
 </html>

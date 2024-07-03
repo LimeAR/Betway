@@ -25,17 +25,8 @@ const source = createMediaStreamSource(mediaStream, { cameraType: 'environment'
 
 await session.setSource(source);
 
-//source.setRenderSize(window.innerWidth, window.innerHeight)
-
 session.play('capture');
 
-await setTimeout(function(){session.applyLens(lens)},500);
-
-playNow();
+await session.applyLens(lens);
 
 })();
-
-function playNow(){
-  document.getElementById("playbtn").style.visibility = "hidden";
-  setTimeout(function(){document.getElementById("playbtn").style.visibility = "visible";},5000);
-}
