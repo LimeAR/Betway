@@ -29,4 +29,13 @@ session.play('capture');
 
 await session.applyLens(lenses[6]);
 
+await setTimeout(function(){session.applyLens(lenses[6])},500);
+
+playNow();
+
 })();
+
+function playNow(){
+  document.getElementById("playbtn").style.visibility = "hidden";
+  setTimeout(function(){document.getElementById("playbtn").style.visibility = "visible";},5000);
+}
